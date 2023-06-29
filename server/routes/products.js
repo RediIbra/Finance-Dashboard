@@ -1,6 +1,5 @@
 import express from "express";
 import Products from "../models/Products.js";
-import { kpis } from "../data/data.js";
 const router = express.Router();
 
 router.get("/products", async (req, res) => {
