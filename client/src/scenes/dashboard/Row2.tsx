@@ -1,20 +1,15 @@
 import DashboardBox from "@/components/DashboardBox";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useGetProductsQuery, useGetKpisQuery } from "@/state/api";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import {
   ResponsiveContainer,
-  AreaChart,
   YAxis,
   XAxis,
   ZAxis,
   Tooltip,
-  Area,
   CartesianGrid,
   Line,
-  Legend,
-  BarChart,
-  Bar,
   LineChart,
   PieChart,
   Pie,
@@ -133,7 +128,7 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
+              {pieData.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={pieColors[index]} />
               ))}
             </Pie>
