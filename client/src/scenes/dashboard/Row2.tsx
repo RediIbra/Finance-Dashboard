@@ -32,7 +32,7 @@ const pieData = [
 
 const Row2 = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = [palette.primary[900], palette.primary[300]];
   const { data: productData } = useGetProductsQuery();
   const { data: operationalData } = useGetKpisQuery();
 
@@ -65,7 +65,7 @@ const Row2 = () => {
   return (
     <>
       <DashboardBox gridArea="d">
-        <BoxHeader title="Operational vs Non-Operational" sideText="+4%" />
+        <BoxHeader title="Operational vs Non-Operational" sideText="+30%" />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={operationalExpenses}
@@ -101,23 +101,23 @@ const Row2 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="Non Operational Expenses"
-              stroke={palette.primary[500]}
+              stroke={palette.primary[300]}
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="Operational Expenses"
-              stroke={palette.primary[500]}
+              stroke={palette.primary[300]}
             />
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
       <DashboardBox gridArea="e">
-        <BoxHeader title="Campaings and Targets" sideText="+4%" />
+        <BoxHeader title="Campaings and Targets" sideText="+21%" />
         <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
           <PieChart
-            width={110}
-            height={100}
+            width={120}
+            height={180}
             margin={{
               top: 0,
               right: -10,
@@ -139,17 +139,17 @@ const Row2 = () => {
             </Pie>
           </PieChart>
           <Box flexBasis="40%" textAlign="center">
-            <Typography variant="h5">Target Sales</Typography>
+            <Typography variant="h3">Target Sales</Typography>
             <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
               83
             </Typography>
-            <Typography variant="h6">Finance goals of the campaign</Typography>
+            <Typography variant="h5">Finance goals of the campaign</Typography>
           </Box>
 
           <Box flexBasis="40%">
-            <Typography variant="h5">Target Sales</Typography>
+            <Typography variant="h3">Target Sales</Typography>
             <Typography variant="h6">Loses are down 25%</Typography>
-            <Typography mt="0.4rem" variant="h5">
+            <Typography mt="0.4rem" variant="h3">
               Profit Margins
             </Typography>
             <Typography mt="0.4rem" variant="h6">
