@@ -13,7 +13,7 @@ import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[500]];
+  const pieColors = [palette.primary[800], palette.primary[300]];
   const { data: kpiData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
   const { data: transactionsData } = useGetTransactionsQuery();
@@ -40,14 +40,9 @@ const Row3 = () => {
 
   const productColumns = [
     {
-      field: "_id",
-      headerName: "id",
-      flex: 1,
-    },
-    {
       field: "expense",
       headerName: "Expense",
-      flex: 0.5,
+      flex: 1,
       renderCell: (params: GridCellParams) => `$${params.value}`,
     },
     {
@@ -59,11 +54,6 @@ const Row3 = () => {
   ];
 
   const transactionColumns = [
-    {
-      field: "_id",
-      headerName: "id",
-      flex: 1,
-    },
     {
       field: "buyer",
       headerName: "Buyer",
@@ -128,7 +118,7 @@ const Row3 = () => {
         <Box
           mt="1rem"
           p="0 0.5rem"
-          height="80%"
+          height="72%"
           sx={{
             "& .MuiDataGrid-root": {
               color: palette.grey[300],
@@ -155,11 +145,11 @@ const Row3 = () => {
         </Box>
       </DashboardBox>
       <DashboardBox gridArea="i">
-        <BoxHeader title="Expense Breakedown by Category" sideText="+4%" />
-        <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
+        <BoxHeader title="Expense Category" sideText="+5%" />
+        <FlexBetween mt="0rem" gap="0.5rem" p="0.1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
-              <PieChart width={110} height={100}>
+              <PieChart width={110} height={80}>
                 <Pie
                   stroke="none"
                   data={data}
@@ -168,7 +158,7 @@ const Row3 = () => {
                   paddingAngle={2}
                   dataKey="value"
                 >
-                  {data.map((entry, index) => (
+                  {data.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                   ))}
                 </Pie>
@@ -179,16 +169,16 @@ const Row3 = () => {
         </FlexBetween>
       </DashboardBox>
       <DashboardBox gridArea="j">
-        <BoxHeader title="Overall Summary and Explation Data" sideText="+15%" />
+        <BoxHeader title="Expense VS Prices" sideText="+5%" />
         <Box
           height="15px"
           margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
+          bgcolor={palette.primary[900]}
           borderRadius="1rem"
         >
           <Box
             height="15px"
-            bgcolor={palette.primary[600]}
+            bgcolor={palette.primary[300]}
             borderRadius="1rem"
             width="40%"
           ></Box>
