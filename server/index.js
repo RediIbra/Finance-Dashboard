@@ -25,6 +25,7 @@ app.use(cors());
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
+
 const PORT = process.env.PORT || 9000;
 mongoose
   .connect(
