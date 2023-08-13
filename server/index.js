@@ -14,6 +14,7 @@ import transactionRoutes from "./routes/transaction.js";
 import Transaction from "./models/Transaction.js";
 
 const app = express();
+
 dotenv.configDotenv();
 app.use(express.json());
 app.use(helmet());
