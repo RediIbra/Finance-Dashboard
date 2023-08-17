@@ -9,7 +9,7 @@ start the server:
 than run the client:
 -->cd client
 -->npm run dev 
-
+ 
 Technologies Stack:
  
 --Front: 
