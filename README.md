@@ -11,7 +11,7 @@ than run the client:
 -->npm run dev 
 
 Technologies Stack:
-
+ 
 --Front: 
 -Vite
 -TypeScript
