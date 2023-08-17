@@ -5,7 +5,7 @@ You dont need to have MongoDb every information is in my Cloud Database(MongoDb 
 start the server:
 -->cd server
 -->npm run dev
-
+ 
 than run the client:
 -->cd client
 -->npm run dev 
