@@ -12,7 +12,7 @@ than run the client:
 
 Technologies Stack:
 
---Front:
+--Front: 
 -Vite
 -TypeScript
 -UI styling:Mui,Recharts(graph styling)
