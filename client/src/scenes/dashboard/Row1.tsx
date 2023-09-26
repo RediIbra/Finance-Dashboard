@@ -20,7 +20,7 @@ import { useTheme } from "@mui/material";
 const Row1 = () => {
   const { palette } = useTheme();
   const { data } = useGetKpisQuery();
-
+  console.log(data);
   const revenue = useMemo(() => {
     return (
       data &&

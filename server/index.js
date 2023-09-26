@@ -29,6 +29,7 @@ app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
 
 const PORT = process.env.PORT || 9000;
+
 mongoose
   .connect(
     "mongodb+srv://redi:1234@cluster0.tqthdv4.mongodb.net/?retryWrites=true&w=majority",
