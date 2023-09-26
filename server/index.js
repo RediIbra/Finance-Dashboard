@@ -32,7 +32,7 @@ const PORT = process.env.PORT || 9000;
 
 mongoose
   .connect(
-    "mongodb+srv://redi:1234@cluster0.tqthdv4.mongodb.net/?retryWrites=true&w=majority",
+    "<Your DB string here>",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
