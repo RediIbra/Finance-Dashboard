@@ -2,10 +2,12 @@
 
 ## MERN app(MongoDb,Express,React,Node.js).The app shows informations about actions that clients do also the profits and number of transactions.
 
+### Run server
+
 -->cd server
 -->npm run dev
  
-than run the client:
+### Than run the client:
 -->cd client
 -->npm run dev 
  
