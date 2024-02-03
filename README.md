@@ -8,25 +8,24 @@
 - npm run dev
  
 ### Than run the client:
--->cd client
--->npm run dev 
+- cd client
+- npm run dev 
  
-Technologies Stack: 
- 
---Front: 
--Vite
--TypeScript
--UI styling:Mui,Recharts(graph styling)
--State menagment:Redux toolkit
--Estlint
+#### Technologies Stack: 
+ ##### Front: 
+- Vite
+- TypeScript
+- UI styling:Mui,Recharts(graph styling)
+- State menagment:Redux toolkit
+- Estlint
 
---Backend:
--express
--cors
--helmet
--mongoose
--mongoose-currency
--nodemon
+##### Backend:
+- express
+- cors
+- helmet
+- mongoose
+- mongoose-currency
+- nodemon
 
-If you want to delete the datas you can uncoment the querys that i have created
+## If you want to delete the datas you can uncoment the querys that i have created
 I get informations in server/data/data.js folder
