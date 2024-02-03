@@ -28,4 +28,4 @@
 - nodemon
 
 ## If you want to delete the datas you can uncoment the querys that i have created
-I get informations in server/data/data.js folder
+## You can get informations in __server/data/data.js__ folder
